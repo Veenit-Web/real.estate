@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Aurum Estates — Premium Real Estate</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- ══ HEADER ══════════════════════════════════ -->
+<header class="hdr" id="hdr">
+  <nav class="nav container">
+
+    <!-- Logo -->
+    <a href="#home" class="logo">
+      <span class="logo-ic">✦</span>
+      <span class="logo-tx">Aurum<em>Estates</em></span>
+    </a>
+
+    <!-- Desktop nav (hidden on mobile via CSS) -->
+    <div class="nav-links-desk">
+      <a href="#home">Home</a>
+      <a href="#properties">Properties</a>
+      <a href="#services">Services</a>
+      <a href="#sell">Sell Property</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <!-- Desktop CTA (hidden on mobile) -->
+    <div class="nav-cta-desk">
+      <!-- REPLACE: your phone number -->
+      <a href="tel:+911234567890" class="btn-call"><i class="fas fa-phone"></i> Call Now</a>
+      <!-- REPLACE: your WhatsApp number -->
+      <a href="https://wa.me/911234567890?text=Hi%2C%20I%27m%20interested%20in%20a%20property." target="_blank" class="btn-wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+    </div>
+
+    <!-- Hamburger (visible only on mobile) -->
+    <button class="ham" id="ham" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+
+  </nav>
+
+  <!-- Mobile drawer (separate from nav flow) -->
+  <div class="nav-drawer" id="drawer">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#properties">Properties</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#sell">Sell Property</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="drawer-cta">
+      <!-- REPLACE: your phone number -->
+      <a href="tel:+911234567890" class="btn-call"><i class="fas fa-phone"></i> Call Now</a>
+      <!-- REPLACE: your WhatsApp number -->
+      <a href="https://wa.me/911234567890" target="_blank" class="btn-wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+    </div>
+  </div>
+</header>
+
+<!-- ══ HERO ════════════════════════════════════ -->
+<section class="hero" id="home">
+  <div class="hero-ov"></div>
+  <!-- REPLACE: hero background image URL in CSS (.hero-bg) -->
+  <div class="hero-bg"></div>
+  <div class="hero-ct container">
+    <h1 class="hero-h1" data-anim="up" data-delay="100" data-dur="900">Find Your<br/><em>Dream Property</em></h1>
+    <p class="hero-p" data-anim="up" data-delay="200">Curated luxury homes, premium plots & commercial spaces across India's finest locations.</p>
+    <div class="hero-btns" data-anim="up" data-delay="300">
+      <a href="#properties" class="btn-g">View Properties</a>
+      <!-- REPLACE: your WhatsApp number -->
+      <a href="https://wa.me/911234567890?text=Hi%2C%20I%27d%20like%20to%20book%20a%20site%20visit." target="_blank" class="btn-o">Book Site Visit</a>
+    </div>
+    <!-- Search Filter -->
+    <div class="sbar" data-anim="up" data-delay="400">
+      <select id="fLoc">
+        <option value="">All Locations</option>
+        <option value="mumbai">Mumbai</option>
+        <option value="bangalore">Bangalore</option>
+        <option value="delhi">Delhi</option>
+        <option value="hyderabad">Hyderabad</option>
+        <option value="pune">Pune</option>
+        <option value="goa">Goa</option>
+      </select>
+      <select id="fPrice">
+        <option value="">All Prices</option>
+        <option value="1">Under ₹1 Cr</option>
+        <option value="3">Under ₹3 Cr</option>
+        <option value="5">Under ₹5 Cr</option>
+        <option value="10">Under ₹10 Cr</option>
+      </select>
+      <select id="fType">
+        <option value="">All Types</option>
+        <option value="apartment">Apartment</option>
+        <option value="villa">Villa</option>
+        <option value="plot">Plot</option>
+        <option value="commercial">Commercial</option>
+      </select>
+      <button class="sbar-btn" onclick="filterProps()"><i class="fas fa-search"></i> Search</button>
+    </div>
+  </div>
+  <div class="scroll-ind"><span>Scroll</span><div class="scroll-line"></div></div>
+</section>
+
+<!-- ══ STATS ═══════════════════════════════════ -->
+<section class="stats">
+  <div class="container stats-g">
+    <div class="stat" data-anim="up" data-delay="100"><span class="stat-n" data-t="500">0</span><span class="stat-s">+</span><p class="stat-l">Happy Clients</p></div>
+    <div class="stat-div"></div>
+    <div class="stat" data-anim="up" data-delay="200"><span class="stat-n" data-t="300">0</span><span class="stat-s">+</span><p class="stat-l">Properties Sold</p></div>
+    <div class="stat-div"></div>
+    <div class="stat" data-anim="up" data-delay="300"><span class="stat-n" data-t="10">0</span><span class="stat-s">+</span><p class="stat-l">Years Experience</p></div>
+    <div class="stat-div"></div>
+    <div class="stat" data-anim="up" data-delay="400"><span class="stat-n" data-t="50">0</span><span class="stat-s">+</span><p class="stat-l">Premium Projects</p></div>
+  </div>
+</section>
+
+<!-- ══ PROPERTIES ══════════════════════════════ -->
+<section class="props" id="properties">
+  <div class="container">
+    <div class="sec-head rv" data-anim="up">
+      <p class="tag">Our Portfolio</p>
+      <h2 class="sec-title">Featured <em>Properties</em></h2>
+      <p class="sec-sub">Handpicked luxury residences for the discerning buyer</p>
+    </div>
+    <div class="pg" id="pg">
+
+      <!-- CARD 1 — REPLACE: data-loc, data-price, data-type, image URL, WhatsApp message -->
+      <div class="pc rv" data-loc="mumbai" data-price="4.5" data-type="apartment" data-anim="up" data-delay="100">
+        <div class="pc-img" style="background-image:url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80')">
+          <span class="pc-badge">Featured</span><span class="pc-type">Apartment</span>
+        </div>
+        <div class="pc-body">
+          <h3 class="pc-title">Seabreeze Residences</h3>
+          <p class="pc-loc"><i class="fas fa-map-marker-alt"></i> Bandra West, Mumbai</p>
+          <p class="pc-price">₹4.5 Cr <span>onwards</span></p>
+          <div class="pc-meta"><span><i class="fas fa-bed"></i> 3 BHK</span><span><i class="fas fa-expand-arrows-alt"></i> 1,850 sq.ft</span></div>
+          <p class="pc-desc">Stunning sea-facing apartments with panoramic views, imported marble flooring & smart home automation.</p>
+          <a href="https://wa.me/911234567890?text=Hi%2C%20I%27d%20like%20to%20book%20a%20site%20visit%20for%20Seabreeze%20Residences%2C%20Mumbai." target="_blank" class="btn-book"><i class="fab fa-whatsapp"></i> Book Site Visit</a>
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="pc rv" data-loc="bangalore" data-price="2.8" data-type="villa" data-anim="up" data-delay="200">
+        <div class="pc-img" style="background-image:url('https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=600&q=80')">
+          <span class="pc-badge">New Launch</span><span class="pc-type">Villa</span>
+        </div>
+        <div class="pc-body">
+          <h3 class="pc-title">Verdant Grove Villas</h3>
+          <p class="pc-loc"><i class="fas fa-map-marker-alt"></i> Whitefield, Bangalore</p>
+          <p class="pc-price">₹2.8 Cr <span>onwards</span></p>
+          <div class="pc-meta"><span><i class="fas fa-bed"></i> 4 BHK</span><span><i class="fas fa-expand-arrows-alt"></i> 3,200 sq.ft</span></div>
+          <p class="pc-desc">Luxurious independent villas in a gated community with private gardens and a world-class clubhouse.</p>
+          <a href="https://wa.me/911234567890?text=Hi%2C%20I%27d%20like%20to%20book%20a%20site%20visit%20for%20Verdant%20Grove%20Villas%2C%20Bangalore." target="_blank" class="btn-book"><i class="fab fa-whatsapp"></i> Book Site Visit</a>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="pc rv" data-loc="goa" data-price="6.2" data-type="villa" data-anim="up" data-delay="300">
+        <div class="pc-img" style="background-image:url('https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=600&q=80')">
+          <span class="pc-badge">Exclusive</span><span class="pc-type">Villa</span>
+        </div>
+        <div class="pc-body">
+          <h3 class="pc-title">Azure Cliff Estate</h3>
+          <p class="pc-loc"><i class="fas fa-map-marker-alt"></i> Calangute, Goa</p>
+          <p class="pc-price">₹6.2 Cr <span>onwards</span></p>
+          <div class="pc-meta"><span><i class="fas fa-bed"></i> 5 BHK</span><span><i class="fas fa-expand-arrows-alt"></i> 5,000 sq.ft</span></div>
+          <p class="pc-desc">Ultra-luxury beachside villa with private pool, rooftop lounge & direct beach access. A rare investment.</p>
+          <a href="https://wa.me/911234567890?text=Hi%2C%20I%27d%20like%20to%20book%20a%20site%20visit%20for%20Azure%20Cliff%20Estate%2C%20Goa." target="_blank" class="btn-book"><i class="fab fa-whatsapp"></i> Book Site Visit</a>
+        </div>
+      </div>
+
+      <!-- CARD 4 -->
+      <div class="pc rv" data-loc="hyderabad" data-price="0.85" data-type="plot" data-anim="up" data-delay="100">
+        <div class="pc-img" style="background-image:url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=600&q=80')">
+          <span class="pc-badge">RERA Approved</span><span class="pc-type">Plot</span>
+        </div>
+        <div class="pc-body">
+          <h3 class="pc-title">Emerald Valley Plots</h3>
+          <p class="pc-loc"><i class="fas fa-map-marker-alt"></i> Shamirpet, Hyderabad</p>
+          <p class="pc-price">₹85 L <span>onwards</span></p>
+          <div class="pc-meta"><span><i class="fas fa-vector-square"></i> Plot</span><span><i class="fas fa-expand-arrows-alt"></i> 200–500 sq.yd</span></div>
+          <p class="pc-desc">Gated township plots with clear titles, internal roads, drainage & electricity. Ideal for investment.</p>
+          <a href="https://wa.me/911234567890?text=Hi%2C%20I%27d%20like%20to%20book%20a%20site%20visit%20for%20Emerald%20Valley%20Plots%2C%20Hyderabad." target="_blank" class="btn-book"><i class="fab fa-whatsapp"></i> Book Site Visit</a>
+        </div>
+      </div>
+
+      <!-- CARD 5 -->
+      <div class="pc rv" data-loc="pune" data-price="1.6" data-type="apartment" data-anim="up" data-delay="200">
+        <div class="pc-img" style="background-image:url('https://images.unsplash.com/photo-1565182999561-18d7dc61c393?w=600&q=80')">
+          <span class="pc-badge">Ready to Move</span><span class="pc-type">Apartment</span>
+        </div>
+        <div class="pc-body">
+          <h3 class="pc-title">The Ivory Heights</h3>
+          <p class="pc-loc"><i class="fas fa-map-marker-alt"></i> Koregaon Park, Pune</p>
+          <p class="pc-price">₹1.6 Cr <span>onwards</span></p>
+          <div class="pc-meta"><span><i class="fas fa-bed"></i> 2 BHK</span><span><i class="fas fa-expand-arrows-alt"></i> 1,100 sq.ft</span></div>
+          <p class="pc-desc">Move-in ready premium apartments in Pune's most sought-after neighbourhood with top-tier amenities.</p>
+          <a href="https://wa.me/911234567890?text=Hi%2C%20I%27d%20like%20to%20book%20a%20site%20visit%20for%20The%20Ivory%20Heights%2C%20Pune." target="_blank" class="btn-book"><i class="fab fa-whatsapp"></i> Book Site Visit</a>
+        </div>
+      </div>
+
+      <!-- CARD 6 -->
+      <div class="pc rv" data-loc="delhi" data-price="9.5" data-type="commercial" data-anim="up" data-delay="300">
+        <div class="pc-img" style="background-image:url('https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80')">
+          <span class="pc-badge">Premium</span><span class="pc-type">Commercial</span>
+        </div>
+        <div class="pc-body">
+          <h3 class="pc-title">Prestige Business Hub</h3>
+          <p class="pc-loc"><i class="fas fa-map-marker-alt"></i> Connaught Place, Delhi</p>
+          <p class="pc-price">₹9.5 Cr <span>onwards</span></p>
+          <div class="pc-meta"><span><i class="fas fa-building"></i> Commercial</span><span><i class="fas fa-expand-arrows-alt"></i> 5,000 sq.ft</span></div>
+          <p class="pc-desc">Premium Grade-A office spaces in Delhi's prime business district — perfect for corporates & investors.</p>
+          <a href="https://wa.me/911234567890?text=Hi%2C%20I%27d%20like%20to%20book%20a%20site%20visit%20for%20Prestige%20Business%20Hub%2C%20Delhi." target="_blank" class="btn-book"><i class="fab fa-whatsapp"></i> Book Site Visit</a>
+        </div>
+      </div>
+
+    </div>
+    <div class="no-res" id="noRes"><i class="fas fa-search"></i><p>No properties match your filters. Try a different combination.</p></div>
+  </div>
+</section>
+
+<!-- ══ SERVICES ════════════════════════════════ -->
+<section class="svcs" id="services">
+  <div class="container">
+    <div class="sec-head lt rv" data-anim="up">
+      <p class="tag">What We Do</p>
+      <h2 class="sec-title lt">Our <em>Services</em></h2>
+      <p class="sec-sub">Comprehensive real estate solutions tailored to your needs</p>
+    </div>
+    <div class="sg">
+      <div class="sc rv" data-anim="left" data-delay="100"><div class="sc-ic"><i class="fas fa-home"></i></div><h3>Buy Property</h3><p>Find your perfect home from our curated portfolio of luxury residential and commercial properties across India.</p><a href="#properties" class="sc-lnk">Explore →</a></div>
+      <div class="sc rv" data-anim="up" data-delay="200"><div class="sc-ic"><i class="fas fa-tag"></i></div><h3>Sell Property</h3><p>Get the best value for your property with our expert pricing, staging, and premium marketing strategies.</p><a href="#sell" class="sc-lnk">List Now →</a></div>
+      <div class="sc rv" data-anim="up" data-delay="300"><div class="sc-ic"><i class="fas fa-key"></i></div><h3>Rent Property</h3><p>Discover premium rental options with fully managed interiors and professional property management services.</p><a href="#contact" class="sc-lnk">Inquire →</a></div>
+      <div class="sc rv" data-anim="right" data-delay="400"><div class="sc-ic"><i class="fas fa-chart-line"></i></div><h3>Consultation</h3><p>Personalized investment advice, legal guidance & market analysis from our seasoned real estate experts.</p><a href="#contact" class="sc-lnk">Consult →</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ ABOUT ═══════════════════════════════════ -->
+<section class="abt" id="about">
+  <div class="container abt-g">
+    <div class="abt-img-wrap rv" data-anim="left" data-dur="900">
+      <!-- REPLACE: your office/team photo URL -->
+      <div class="abt-img" style="background-image:url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=700&q=80')"></div>
+      <div class="abt-badge"><b>10+</b><small>Years of Excellence</small></div>
+    </div>
+    <div class="rv" data-anim="right" data-dur="900" data-delay="150">
+      <h2 class="sec-title">India's Most <em>Trusted</em><br/>Real Estate Partner</h2>
+      <p class="abt-p">Founded in 2014, Aurum Estates has redefined luxury real estate in India. We are not just property dealers — we are curators of lifestyle, helping clients find spaces that truly resonate with their vision.</p>
+      <p class="abt-p">With a pan-India presence and deep understanding of local markets, our 50+ certified experts deliver unmatched service — from site visits and legal verification to loan assistance and post-purchase support.</p>
+      <ul class="abt-ft">
+        <li><i class="fas fa-check-circle"></i> RERA Certified & Legally Verified Properties</li>
+        <li><i class="fas fa-check-circle"></i> Transparent Pricing with No Hidden Charges</li>
+        <li><i class="fas fa-check-circle"></i> End-to-End Assistance from Search to Registration</li>
+        <li><i class="fas fa-check-circle"></i> Home Loan Assistance with 15+ Banking Partners</li>
+      </ul>
+      <!-- REPLACE: your WhatsApp number -->
+      <a href="https://wa.me/911234567890?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20Aurum%20Estates." target="_blank" class="btn-g">Talk to an Expert</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SELL ════════════════════════════════════ -->
+<section class="sell" id="sell">
+  <div class="container sell-g">
+    <div class="rv" data-anim="left" data-dur="900">
+      <p class="tag">List With Us</p>
+      <h2 class="sec-title lt">Want to Sell Your<br/><em>Property?</em></h2>
+      <p class="sell-p">We connect your property with thousands of verified buyers. Our marketing reach and expert negotiators ensure you get the best price — fast.</p>
+      <ul class="sell-ft">
+        <li><i class="fas fa-star"></i> Free property valuation</li>
+        <li><i class="fas fa-star"></i> Premium digital marketing</li>
+        <li><i class="fas fa-star"></i> Verified buyer database</li>
+        <li><i class="fas fa-star"></i> End-to-end documentation support</li>
+      </ul>
+    </div>
+    <div class="form-wrap rv" data-anim="scale" data-delay="200">
+      <h3 class="form-ttl">Get a Free Valuation</h3>
+      <!-- REPLACE: YOUR_FORM_ID with your actual Formspree ID from formspree.io -->
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" id="sellForm">
+        <div class="fg"><label>Your Name *</label><input type="text" name="name" placeholder="e.g. Rahul Sharma" required/></div>
+        <div class="fg"><label>Phone Number *</label><input type="tel" name="phone" placeholder="+91 XXXXX XXXXX" required/></div>
+        <div class="fg"><label>Property Location *</label><input type="text" name="location" placeholder="e.g. Bandra West, Mumbai" required/></div>
+        <div class="fg"><label>Property Type *</label>
+          <select name="type" required>
+            <option value="">Select type...</option>
+            <option>Apartment</option><option>Villa / Bungalow</option>
+            <option>Plot / Land</option><option>Commercial</option><option>Other</option>
+          </select>
+        </div>
+        <button type="submit" class="btn-g fw"><i class="fas fa-paper-plane"></i> Submit Enquiry</button>
+        <p class="f-note">We'll contact you within 24 hours.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ══ TESTIMONIALS ════════════════════════════ -->
+<section class="testi" id="testimonials">
+  <div class="container">
+    <div class="sec-head rv" data-anim="up"><p class="tag">Client Stories</p><h2 class="sec-title">What Our <em>Clients</em> Say</h2></div>
+    <div class="tg">
+      <!-- REPLACE: client photo URLs with real client images -->
+      <div class="tc rv" data-anim="up" data-delay="100">
+        <div class="tc-av" style="background-image:url('https://randomuser.me/api/portraits/men/32.jpg')"></div>
+        <div class="tc-stars">★★★★★</div>
+        <p class="tc-q">"Aurum Estates helped me find a stunning sea-facing apartment in Bandra in just 3 weeks. The entire process was smooth, transparent, and professional. Highly recommended!"</p>
+        <div class="tc-n">Arjun Mehra</div><div class="tc-r">Tech Entrepreneur, Mumbai</div>
+      </div>
+      <div class="tc rv" data-anim="up" data-delay="200">
+        <div class="tc-av" style="background-image:url('https://randomuser.me/api/portraits/women/44.jpg')"></div>
+        <div class="tc-stars">★★★★★</div>
+        <p class="tc-q">"We sold our Pune property at 15% above market price! Their marketing strategy and buyer network are exceptional. I'd trust Aurum Estates with every property decision."</p>
+        <div class="tc-n">Priya Kapoor</div><div class="tc-r">Business Owner, Pune</div>
+      </div>
+      <div class="tc rv" data-anim="up" data-delay="300">
+        <div class="tc-av" style="background-image:url('https://randomuser.me/api/portraits/men/67.jpg')"></div>
+        <div class="tc-stars">★★★★★</div>
+        <p class="tc-q">"The consultation session alone was worth it. They guided me on the best investment areas in Bangalore and the ROI has been phenomenal. True experts in their field."</p>
+        <div class="tc-n">Vikram Nair</div><div class="tc-r">NRI Investor, Bangalore</div>
+      </div>
+      <div class="tc rv" data-anim="up" data-delay="400">
+        <div class="tc-av" style="background-image:url('https://randomuser.me/api/portraits/women/21.jpg')"></div>
+        <div class="tc-stars">★★★★★</div>
+        <p class="tc-q">"From site visit to registration, everything was handled with utmost professionalism. Our Goa villa is our dream come true and Aurum made it happen seamlessly."</p>
+        <div class="tc-n">Sneha Reddy</div><div class="tc-r">Doctor, Hyderabad</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CONTACT ══════════════════════════════════ -->
+<section class="cnt" id="contact">
+  <div class="container">
+    <div class="sec-head rv" data-anim="up"><p class="tag">Get In Touch</p><h2 class="sec-title">Let's Find Your<br/><em>Perfect Space</em></h2></div>
+    <div class="cnt-g">
+      <div class="rv" data-anim="left" data-dur="900">
+        <div class="ci"><div class="ci-ic"><i class="fas fa-phone-alt"></i></div><div><h4>Call Us</h4>
+          <!-- REPLACE: your phone numbers -->
+          <a href="tel:+911234567890">+91 12345 67890</a>
+          <a href="tel:+911234567891">+91 12345 67891</a>
+        </div></div>
+        <div class="ci"><div class="ci-ic"><i class="fas fa-envelope"></i></div><div><h4>Email Us</h4>
+          <!-- REPLACE: your email -->
+          <a href="/cdn-cgi/l/email-protection#2048454c4c4f60415552554d455354415445530e494e"><span class="__cf_email__" data-cfemail="026a676e6e6d42637770776f677176637667712c6b6c">[email&#160;protected]</span></a>
+        </div></div>
+        <div class="ci"><div class="ci-ic"><i class="fas fa-map-marker-alt"></i></div><div><h4>Visit Us</h4>
+          <!-- REPLACE: your office address -->
+          <p>12A, Gold Tower, Nariman Point,<br/>Mumbai, Maharashtra 400021</p>
+        </div></div>
+        <div class="ci"><div class="ci-ic"><i class="fas fa-clock"></i></div><div><h4>Working Hours</h4>
+          <p>Mon–Sat: 9:00 AM – 7:00 PM<br/>Sunday: 10:00 AM – 4:00 PM</p>
+        </div></div>
+        <!-- REPLACE: Google Maps embed URL — get from maps.google.com > Share > Embed a map -->
+        <div class="map-w">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3773.9!2d72.8260!3d18.9256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7d1c3504e3e51%3A0x4d7b6d7e5c3b2a1f!2sNariman%20Point%2C%20Mumbai!5e0!3m2!1sen!2sin!4v1" width="100%" height="200" style="border:0;display:block" allowfullscreen loading="lazy"></iframe>
+        </div>
+      </div>
+      <!-- REPLACE: YOUR_FORM_ID with Formspree form ID -->
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="cnt-form rv" id="cntForm" data-anim="right" data-dur="900" data-delay="150">
+        <div class="fr">
+          <div class="fg"><label>Full Name *</label><input type="text" name="name" placeholder="Your full name" required/></div>
+          <div class="fg"><label>Phone *</label><input type="tel" name="phone" placeholder="+91 XXXXX XXXXX" required/></div>
+        </div>
+        <div class="fg"><label>Email</label><input type="email" name="email" placeholder="your@email.com"/></div>
+        <div class="fg"><label>Subject *</label>
+          <select name="subject" required>
+            <option value="">Select a subject...</option>
+            <option>Buy a Property</option><option>Sell My Property</option>
+            <option>Rent a Property</option><option>Investment Consultation</option><option>Other</option>
+          </select>
+        </div>
+        <div class="fg"><label>Message</label><textarea name="message" rows="4" placeholder="Tell us more about your requirement..."></textarea></div>
+        <button type="submit" class="btn-g fw">Send Message <i class="fas fa-arrow-right"></i></button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══════════════════════════════════ -->
+<footer class="ftr">
+  <div class="container">
+    <div class="ftr-g">
+      <div>
+        <a href="#home" class="logo" style="margin-bottom:14px;display:inline-flex"><span class="logo-ic">✦</span><span class="logo-tx">Aurum<em>Estates</em></span></a>
+        <p class="ftr-tag">Crafting dreams into addresses since 2014. India's most trusted luxury real estate partner.</p>
+        <div class="soc">
+          <!-- REPLACE: social media links -->
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="ftr-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li><li><a href="#properties">Properties</a></li>
+          <li><a href="#services">Services</a></li><li><a href="#sell">Sell Property</a></li>
+          <li><a href="#about">About Us</a></li><li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="ftr-col">
+        <h4>Property Types</h4>
+        <ul>
+          <li><a href="#">Luxury Apartments</a></li><li><a href="#">Villas & Bungalows</a></li>
+          <li><a href="#">Plots & Land</a></li><li><a href="#">Commercial Spaces</a></li>
+          <li><a href="#">NRI Services</a></li><li><a href="#">Investment Advisory</a></li>
+        </ul>
+      </div>
+      <div class="ftr-ci">
+        <h4 style="font-family:var(--fd);font-size:1.05rem;font-weight:600;color:var(--wht);margin-bottom:18px;padding-bottom:8px;border-bottom:1px solid rgba(201,168,76,.2)">Contact</h4>
+        <!-- REPLACE: contact details -->
+        <p><i class="fas fa-phone-alt"></i> +91 12345 67890</p>
+        <p><i class="fas fa-envelope"></i> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="ea828f868685aa8b9f989f878f999e8b9e8f99c48384">[email&#160;protected]</a></p>
+        <p><i class="fas fa-map-marker-alt"></i> 12A Gold Tower,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nariman Point, Mumbai</p>
+        <!-- REPLACE: WhatsApp number -->
+        <a href="https://wa.me/911234567890" target="_blank" class="ftr-wa"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+      </div>
+    </div>
+    <div class="ftr-cp">
+      <p>© 2024 Aurum Estates. All Rights Reserved. | Designed with ♥ in India</p>
+      <div class="ftr-legal"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a><a href="#">RERA Disclosures</a></div>
+    </div>
+  </div>
+</footer>
+
+<!-- ══ FLOATING WHATSAPP ════════════════════════ -->
+<!-- REPLACE: WhatsApp number -->
+<a href="https://wa.me/911234567890?text=Hi%20Aurum%20Estates%2C%20I%27m%20looking%20for%20a%20property." target="_blank" class="fwa" aria-label="WhatsApp">
+  <i class="fab fa-whatsapp" style="position:relative;z-index:1"></i>
+  <span class="fwa-tip">Chat with us!</span>
+</a>
+
+<!-- Back to top -->
+<button class="btt" id="btt" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+<script src="script.js"></script>
+</body>
+</html>
